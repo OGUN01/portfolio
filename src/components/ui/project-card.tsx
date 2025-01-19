@@ -23,13 +23,11 @@ const tagColors = {
 interface ProjectCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, keyof MotionProps> {
   project: Project
   featured?: boolean
-  onView?: () => void
 }
 
 export function ProjectCard({ 
   project, 
   featured = false,
-  onView,
   className,
   ...props 
 }: ProjectCardProps) {
