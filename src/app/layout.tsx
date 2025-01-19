@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "DevGenius | Harsh Sharma",
+  title: "Portify",
   description: "Innovative Full-Stack Developer & AI Enthusiast | Crafting Digital Excellence",
   icons: {
     icon: [
