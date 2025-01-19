@@ -38,7 +38,7 @@ export function Contact() {
             Get in Touch
           </h2>
           <p className="text-base text-muted-foreground/70 max-w-lg mx-auto font-sans">
-            Have a project in mind? Let's discuss how we can work together.
+            Have a project in mind? Let&apos;s discuss how we can work together.
           </p>
         </motion.div>
 

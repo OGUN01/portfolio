@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card"
 
 export function QuickConnect() {
   const whatsappNumber = "+919876543210" // Replace with your actual WhatsApp number
-  const message = "Hi, I'm interested in discussing a custom AI solution..."
+  const message = "Hi, I&apos;m interested in discussing a custom AI solution..."
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
   return (
@@ -29,7 +29,7 @@ export function QuickConnect() {
           className="mb-12"
         >
           <h2 className="mb-4 text-3xl font-bold">Looking for Custom AI Solutions?</h2>
-          <p className="text-muted-foreground">Let's discuss your project directly.</p>
+          <p className="text-muted-foreground">Let&apos;s discuss your project directly.</p>
         </motion.div>
 
         <motion.div

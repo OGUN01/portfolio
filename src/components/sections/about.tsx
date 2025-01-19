@@ -18,7 +18,7 @@ export function About() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
           <p className="text-lg text-gray-400 mb-8">
-            I'm a passionate developer specializing in creating modern web applications
+            I&apos;m a passionate developer specializing in creating modern web applications
             and digital experiences. With expertise in web development, app creation,
             and AI solutions, I bring ideas to life through clean code and intuitive design.
           </p>

@@ -1,14 +1,11 @@
 "use client"
 
 import { Hero } from '@/components/sections/hero'
-import { About } from '@/components/sections/about'
 import { Services } from '@/components/sections/services'
 import { Projects } from '@/components/sections/projects'
-import { QuickConnect } from '@/components/sections/quick-connect'
 import { Contact } from '@/components/sections/contact'
 import { ExpertiseGrid } from "@/components/sections/expertise-grid"
 import { TechGrid } from "@/components/sections/tech-grid"
-import { ProjectCategories } from "@/components/sections/project-categories"
 import { Squares } from '@/components/ui/squares-background'
 import { AnimeNavBarDemo } from '@/components/demos/anime-navbar-demo'
 import { TestimonialsSectionDemo } from '@/components/demos/testimonials-demo'

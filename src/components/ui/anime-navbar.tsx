@@ -1,10 +1,9 @@
 "use client"
 
-import React, { useEffect, useState, useCallback } from "react"
+import React, { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link as ScrollLink, Events, scrollSpy } from "react-scroll"
 import { LucideIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
 
 interface NavItem {
   name: string
@@ -14,15 +13,13 @@ interface NavItem {
 
 interface NavBarProps {
   items: NavItem[]
-  className?: string
   defaultActive?: string
 }
 
-export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBarProps) {
+export function AnimeNavBar({ items, defaultActive = "Home" }: NavBarProps) {
   const [mounted, setMounted] = useState(false)
   const [hoveredTab, setHoveredTab] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<string>(defaultActive)
-  const [isMobile, setIsMobile] = useState(false)
   const [isScrolling, setIsScrolling] = useState(false)
 
   useEffect(() => {
@@ -46,28 +43,18 @@ export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBar
     }
   }, [])
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  const handleSetActive = useCallback((to: string) => {
+  const handleSetActive = (to: string) => {
     if (!isScrolling) {
       const item = items.find(item => item.url === to)
       if (item) {
         setActiveTab(item.name)
       }
     }
-  }, [items, isScrolling])
+  }
 
-  const handleItemClick = useCallback((name: string) => {
+  const handleItemClick = (name: string) => {
     setActiveTab(name)
-  }, [])
+  }
 
   if (!mounted) return null
 
@@ -99,14 +86,10 @@ export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBar
                 duration={500}
                 onSetActive={() => handleSetActive(item.url)}
                 onClick={() => handleItemClick(item.name)}
-                activeClass="active"
-                className={cn(
-                  "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                  "text-white/70 hover:text-white",
-                  isActive && "text-white"
-                )}
                 onMouseEnter={() => setHoveredTab(item.name)}
                 onMouseLeave={() => setHoveredTab(null)}
+                activeClass="active"
+                className="relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 text-white/70 hover:text-white"
               >
                 {isActive && (
                   <motion.div
