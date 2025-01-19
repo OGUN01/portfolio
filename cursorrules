@@ -1,0 +1,65 @@
+1) Use the most advanced language model available for writing and thinking about the code.
+
+2) For any issues identified in the code, before proceeding with any fixes, ensure you are 100% confident that you can implement the correct fix. Have you identified all the necessary components—what needs to change, where, and how? If yes, confirm by saying 'yes.' If not, thoroughly investigate and gather all the required information. Remember, no changes to existing functionality are allowed. Think deeply and carefully, leveraging your advanced capabilities before moving forward.
+
+3) For implementing fixes, adhere to the following process: "Implement this carefully, step by step. After completing each step, thoroughly review your work to ensure it has been executed correctly and does not break any existing functionality.
+
+If you're satisfied with the outcome of the step, proceed to the next one. If not, revisit the previous step, identify the issue, and refine it until you're confident it is correct. Repeat this process for every step to ensure a seamless implementation."
+
+4) Do not write or continue generating code when you are not 100% sure about its correctness. To achieve 100% certainty, thoroughly examine all the files and dependencies relevant to the code you are about to generate or modify.
+
+5) If you are not sure about the correctness of the code, ask for clarification or confirmation from the user.
+
+6) After completing any task or implementing functionality, always request user permission before updating any documentation files (frontend.md, progress.md, readme.md, etc.). This ensures that documentation changes are reviewed and approved by the user before being implemented.
+
+7) Before implementing any feature or component, first outline the complete implementation plan including:
+   - Required dependencies
+   - Component structure
+   - Data flow
+   - Edge cases to handle
+   This prevents getting stuck mid-implementation.
+
+8) When implementing complex features, break them down into smaller, testable chunks. Implement and verify each chunk before moving to the next one. This ensures we catch issues early and maintain steady progress.
+
+9) For any external API or third-party integration:
+   - First verify API compatibility and requirements
+   - Create a test implementation in isolation
+   - Document all required configuration
+   This prevents integration issues later.
+
+10) Maintain a clear separation between:
+    - Core business logic
+    - UI components
+    - State management
+    - API integrations
+    This makes the code more maintainable and easier to debug.
+
+11) Before marking any task as complete, verify:
+    - All edge cases are handled
+    - The implementation is responsive
+    - No console errors exist
+    - Code follows project standards
+    This prevents technical debt and rework.
+
+12) When stuck or facing an issue:
+    - First attempt to solve independently using available tools
+    - If unsuccessful after thorough investigation, clearly document:
+      * What was attempted
+      * What didn't work
+      * Relevant error messages
+      * Potential alternative approaches
+    Then present this information to the user for guidance.
+
+13) For any UI component:
+    - First implement the basic structure
+    - Then add styling
+    - Finally add interactions and animations
+    This methodical approach prevents getting overwhelmed with details.
+
+14) When executing commands in Windows environment:
+    - Always use PowerShell syntax and commands
+    - Verify each command's success before proceeding to the next
+    - Use proper PowerShell paths (with backslashes or proper path escaping)
+    - Wait for each command to complete before executing the next
+    This ensures reliable command execution in Windows environment.
+
