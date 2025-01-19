@@ -10,8 +10,21 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Harsh Sharma | Portfolio",
-  description: "Full-stack developer portfolio showcasing projects and expertise",
+  title: "DevGenius | Harsh Sharma",
+  description: "Innovative Full-Stack Developer & AI Enthusiast | Crafting Digital Excellence",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", type: "image/png" },
+    ],
+    other: [
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#000000" },
+    ],
+  },
+  manifest: "/site.webmanifest",
 }
 
 export const viewport: Viewport = {

@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Hexagon -->
+  <path d="M256 0L472 128V384L256 512L40 384V128L256 0Z" fill="#000000"/>
+  
+  <!-- HS Letters -->
+  <path d="M160 160V240H240V160H280V352H240V280H160V352H120V160H160Z" fill="white"/>
+  <path d="M320 160C364.183 160 400 195.817 400 240C400 284.183 364.183 320 320 320H300V352H260V160H320ZM320 280C342.091 280 360 262.091 360 240C360 217.909 342.091 200 320 200H300V280H320Z" fill="white"/>
+</svg>

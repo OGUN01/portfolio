@@ -23,16 +23,23 @@ const tagColors = {
 interface ProjectCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, keyof MotionProps> {
   project: Project
   featured?: boolean
+  onView?: () => void
 }
 
 export function ProjectCard({ 
   project, 
   featured = false,
+  onView,
   className,
   ...props 
 }: ProjectCardProps) {
   const [showModal, setShowModal] = React.useState(false)
   const isMobileApp = project.tags.includes("Mobile")
+
+  const handleViewClick = () => {
+    setShowModal(true)
+    onView?.()
+  }
 
   return (
     <>
@@ -130,7 +137,7 @@ export function ProjectCard({
                   <Button 
                     size="sm" 
                     variant="ghost" 
-                    onClick={() => setShowModal(true)}
+                    onClick={handleViewClick}
                   >
                     <Eye className="mr-2 h-4 w-4" />
                     Screenshots
