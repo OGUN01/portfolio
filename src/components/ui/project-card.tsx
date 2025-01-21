@@ -61,10 +61,13 @@ export function ProjectCard({
             "grid gap-6",
             featured ? "md:grid-cols-2" : "grid-cols-1"
           )}>
-            <div className={cn(
-              "relative overflow-hidden rounded-lg",
-              isMobileApp ? "aspect-video flex items-center justify-center bg-gradient-to-br from-zinc-900/90 to-zinc-950" : "aspect-video"
-            )}>
+            <div 
+              className={cn(
+                "relative overflow-hidden rounded-lg cursor-pointer",
+                isMobileApp ? "aspect-video flex items-center justify-center bg-gradient-to-br from-zinc-900/90 to-zinc-950" : "aspect-video"
+              )}
+              onClick={() => project.demoUrl ? window.open(project.demoUrl, '_blank') : setShowModal(true)}
+            >
               {isMobileApp ? (
                 <div className="relative w-full h-full flex items-center justify-center">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none" />
@@ -84,6 +87,15 @@ export function ProjectCard({
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/0" />
+                  {!project.demoUrl && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-center px-4 py-2 rounded-lg bg-background/80 backdrop-blur-sm">
+                        <Lock className="h-6 w-6 mx-auto mb-2" />
+                        <p className="text-sm font-medium">Private Client Project</p>
+                        <p className="text-xs text-muted-foreground">Click to view details</p>
+                      </div>
+                    </div>
+                  )}
                 </>
               )}
               <div className="absolute bottom-4 left-4 flex gap-2">
@@ -120,7 +132,7 @@ export function ProjectCard({
                     </a>
                   </Button>
                 ) : (
-                  <Button size="sm" variant="secondary" disabled>
+                  <Button size="sm" variant="secondary" onClick={() => setShowModal(true)}>
                     <Lock className="mr-2 h-4 w-4" />
                     Private Client
                   </Button>
