@@ -14,14 +14,13 @@ export const metadata: Metadata = {
   description: "Innovative Full-Stack Developer & AI Enthusiast | Crafting Digital Excellence",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" },
+      { url: "/logo/Portify.png", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-icon.png", type: "image/png" },
+      { url: "/logo/Portify.png", type: "image/png" },
     ],
     other: [
-      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#000000" },
+      { rel: "mask-icon", url: "/logo/Portify.png", color: "#000000" },
     ],
   },
   manifest: "/site.webmanifest",
